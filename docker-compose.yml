@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./src:/usr/src/app/src
+    ports:
+      - '3000:3000'
